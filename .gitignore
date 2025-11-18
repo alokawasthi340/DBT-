@@ -1,0 +1,4 @@
+# Private RSA key - do NOT commit
+rsa_key.p8
+rsa_key.pub
+profiles.yml

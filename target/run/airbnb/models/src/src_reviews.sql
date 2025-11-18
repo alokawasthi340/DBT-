@@ -1,0 +1,19 @@
+
+  create or replace   view AIRBNB.DEV.src_reviews
+  
+  
+  
+  
+  as (
+    with RAW_REVIEWS as (
+select * from AIRBNB.RAW.RAW_REVIEWS
+)
+select
+LISTING_ID
+,DATE as REVIEW_DATE
+,REVIEWER_NAME
+,COMMENTS as REVIEW_TEXT
+,SENTIMENT as REVIEW_SENTIMENT
+from RAW_REVIEWS
+  );
+
