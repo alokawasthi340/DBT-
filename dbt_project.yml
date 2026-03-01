@@ -39,9 +39,9 @@ models:
       - "INSERT INTO {{ target.schema }}.audit_log VALUES ('{{ this }}', CURRENT_TIMESTAMP)"
     +materialized: view
     dim:
-      +materialized: view
+      +materialized: table
     src:
-      +materialized: view
+      +materialized: ephemeral
 
 data_tests:
   +store_failures: true
